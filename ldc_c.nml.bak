@@ -1,0 +1,27 @@
+domain
+  x_nodes = 4097
+  y_nodes = 4097
+  length  = 0.05
+  xmin    = 0.0
+  xmax    = 0.05
+  ymin    = 0.0
+  ymax    = 0.05
+physical_properties
+  re      = 100.0
+  rho     = 1.0
+  u_lid   = 1.0
+  p_guage = 0.0
+solver_properties
+  solver     = explicit
+  max_iter   = 1000 
+  cfl        = 0.95
+  k          = 0.01
+  c2         = 0.01
+  Cx         = 0.01
+  Cy         = 0.01
+  rkappa     = 0.1
+  conv_toler = 1.0e-9
+  visc_eps   = 1.0e-7
+output
+  resid_out = 50
+  write_solution = 0
