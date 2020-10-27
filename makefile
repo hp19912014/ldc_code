@@ -8,7 +8,7 @@ FC=pgfortran
 #GCFLAGS_ACC=-O4 -acc -Mpreprocess -Minfo=accel -mp=allcores -Minline -DITHREADS=16 -DJTHREADS=8 -ta=host -tp=penryn
 #GCFLAGS_ACC=-O4 -acc -Mpreprocess -Minfo=accel -mp=allcores -Minline -DITHREADS=16 -DJTHREADS=8 -ta=tesla -tp=penryn
 #GCFLAGS_ACC=-O4 -acc -Mpreprocess -Minfo=accel  -mp=allcores -Minline -DITHREADS=16 -DJTHREADS=8 -ta=tesla -tp=penryn -Mcuda=ptxinfo,Xptxas,v,abi=no -pgf90libs 
-GCFLAGS_ACC=-O4 -acc -Mpreprocess -Minfo=accel -mp=allcores -Minline -DITHREADS=8 -DJTHREADS=16 -tp=penryn -Mcuda=ptxinfo -pgf90libs 
+GCFLAGS_ACC=-O4 -acc -ta=tesla:cc70 -Mpreprocess -Minfo=accel -mp=allcores -Minline -DITHREADS=8 -DJTHREADS=16 -tp=penryn -Mcuda=ptxinfo -pgf90libs 
 #-ta=tesla:cc35,cuda5.5,maxregcount:76  -Mcuda=ptxinfo -pgf90libs
 #-ta=tesla:cc35,cuda5.5
 #-Mcuda=ptxinfo -pgf90libs -ta=tesla:cc30,cuda5.5,maxregcount:76
@@ -17,7 +17,7 @@ GCFLAGS_ACC=-O4 -acc -Mpreprocess -Minfo=accel -mp=allcores -Minline -DITHREADS=
 #GCFLAGS_ACC=-O4 -acc -ta=host -ta=tesla:cc35 -Mpreprocess -Minfo=accel -mp=allcores -Minline -DITHREADS=16 -DJTHREADS=8 -tp=penryn
 #GCFLAGS_ACC=-acc -ta=host -ta=tesla,cc35 -Mpreprocess -Minfo=accel -mp=allcores -Minline
 #FCFLAGS=-O4 -Minfo -Mpreprocess -mp=all -Mvect=simd:256 -Minline #-traceback -openmp -parallel -fpp
-FCFLAGS_ACC=-O4 -acc -ta=host  -Mpreprocess -Minfo=accel -mp=allcores -Minline  -DITHREADS=16 -DJTHREADS=8 -tp=penryn
+FCFLAGS_ACC=-O4 -acc -ta=tesla:cc70  -Mpreprocess -Minfo=accel -mp=allcores -Minline  -DITHREADS=16 -DJTHREADS=8 -tp=penryn
 FCFLAGS=-O4 -Mpreprocess -Minfo=accel -mp=allcores -Minline #-traceback -openmp -parallel -fpp
 LDC_INCLUDE=-I functions/
 
